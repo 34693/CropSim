@@ -11,7 +11,7 @@ class Crop:
         self._days_growing = 0
         self._growth_rate = growth_rate
         self._light_need = light_need
-        self._water_needs = water_need
+        self._water_need = water_need
         self._status = 'Seed'
         self._type = 'Generic'
 
@@ -60,7 +60,7 @@ def manual_grow(crop):
     valid = False
     while not valid:
         try:
-            light = int(input("Please enter a light value between 1 and 10:"))
+            light = int(input("Please enter a light value (1-10): "))
             if 1 <= light <= 10:
                 valid = True
             else:
@@ -70,7 +70,7 @@ def manual_grow(crop):
     valid = False
     while not valid:
         try:
-            water = int(input("Please enter a value between 1 and 10 for the water"))
+            water = int(input("Please enter a water value (1-10):"))
             if 1 <= water <= 10:
                 valid = True
             else:
