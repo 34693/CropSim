@@ -41,7 +41,7 @@ class Crop:
             self._status = 'Seedling'
 
     def grow(self,light,water):
-        if light >= self._light_need and water >= self._water_needs:
+        if light >= self._light_need and water >= self._water_need:
             self._growth += self._growth_rate
         #increment days growing
         self._days_growing += 1

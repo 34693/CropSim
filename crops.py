@@ -16,4 +16,25 @@ def select_option():
         try:
             choice = int(input("Option selected:: "))
             if choice in (1,2):
-                
+                valid_option = True
+            else:
+                print("Please enter a valid option")
+        except ValueError:
+                print("Please enter a valid option")
+        return choice
+
+def create_crop():
+    display_menu()
+    choice = select_option()
+    if choice == 1:
+        new_crop = Potato()
+    elif choice == 2:
+        new_crop = Wheat()
+    return new_crop
+
+def main():
+    new_crop = create_crop()
+    manage_crop(new_crop)
+
+if __name__ == "__main__":
+    main()
