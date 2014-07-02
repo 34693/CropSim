@@ -30,16 +30,14 @@ class Animal:
         self._update_status()
         
     def _update_status(self):
-        if self._weight > 50:
-            self._status = "Old"
-        elif self._weight > 40:
-            self._status = "Adult"
+        if self._weight > 40:
+            self._status = "Prime"
         elif self._weight > 30:
-            self._status = "Young"
+            self._status = "Fine"
         elif self._weight > 20:
-            self._status = "Child"
+            self._status = "Poor"
         elif self._weight == 0:
-            self._status = "Unborn"
+            self._status = "Baby"
 
 def auto_grow(animal, days):
     #grow the crop
